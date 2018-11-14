@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 		<head>
-				<title> H2I |Shop Machines</title>
+				<title> H2I | Shop Machines</title><!--title and importation of bootstrap and js -->
 					<meta charset="UTF-8">
 					<meta name="description" content="H2I| Proteins">
 					<link rel="icon" href="images/logotrans.png" type="image/png"/>
@@ -19,19 +19,14 @@
 					<meta name="viewport" content="width=device-width, initial-scale=1">
 					<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 				<!--Main CSS-->
-				<link rel="stylesheet" href="css/main.css">
-				<!--google Fonts-->
-				<!--<link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
-				<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css">-->
-				<!-- <script src="js/main.js"></script> -->
-			
-			</head>
-<body onload="showanim();">
-    <div id="preloader">
+				<link rel="stylesheet" href="css/main.css"> <!-- import css file -->
+	</head>
+<body onload="showanim();"> <!-- Body statred -->
+    <div id="preloader"><!-- animation while loading the page -->
         <img id="preloadimgposition" src="images/Preloader_3.gif" alt="">
     </div>
-
-<!-- Start Navbar -->
+<header><!-- Header started -->
+<!-- nav bar using bootstrap --> 
 <nav class="navbar navbar-expand-xl navbar-light">
 	<a class="navbar-brand" href="index.html">
 		<img id="image-logo1" src="images/heart.png" class="animated zoomIn">
@@ -72,22 +67,23 @@
 
 <!-- End Navbar -->
 
-
+</header>
+<main> <!--main started -->  
 <!-- Section Protein -->
 	<div class="container-fluid">
 			<div class="shop-carte">
 					<button class="check" id="myBtn"><i class="fa fa-shopping-cart"></i>Check Cart</button>
 				</div>
 		<div class="filter">
-			<button class="btnn1" id="all">All</button>
+			<button class="btnn1" id="all">All</button>  <!--filter machines -->  
 			<button class="btnn1" id="haltere">haltere</button>
 			<button class="btnn1" id="disque">disque</button>
 			<button class="btnn1" id="banc">banc</button>
 			<button class="btnn1" id="access">access</button>
-			<!--<button class="check" id="myBtn">Check Cart</button>-->
+		
 		</div>
 
-		<div class="equipement-content">
+		<div class="equipement-content">  <!--machines grid -->  
 			<div class="equipement-item haltere">
 				<div class="item-head">
 					<img class="image" src="imgs/musc/haltere.jpg">
@@ -279,7 +275,7 @@
 				</div>
 
 			</div>
-			<div class="boxmore">
+			<div class="boxmore">  <!-- more machines-->  
 			<div class="equipement-item haltere">
 				<div class="item-head">
 					<img class="image" src="imgs/musc/haltere4.jpg">
@@ -471,6 +467,7 @@
 
 			</div> 
 		</div> </div>
+		  <!--load less button div -->
 		<div class="load-btn"><button type="button" id="loadless"   class="btn btn-info"
 			onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load Less Items</button></div> 
 
@@ -485,19 +482,16 @@
 
 <div class="modal" id="myModal">
 	<div class="cart modal-content-check">
-<!-- 		<h2 style="text-align: center;">Cart</h2> -->
-			
-
 		<span class="close">&#x2715;</span>
 	</div>
-
 </div>
 
 
 <!-- End Checking Cart -->
+</main>
 
 
-
+        <!-- Footer started using bootstrap -->
 <footer class="page-footer font-small mdb-color pt-4">
 	<div class="container text-center text-md-left">
 	  <div class="row text-center text-md-left mt-3 pb-3">
@@ -615,16 +609,17 @@
 
   
   <!-- Footer -->
-</footer>
+</footer> <!-- Footer ended -->
+ 
 
 
 <script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>
-<script src="js/check.js"></script>
+<script src="js/main.js"></script><!-- import js file -->
+<script src="js/check.js"></script><!-- import js file -->
 
 
-</body>
+</body> <!-- Body Ended  -->
 </html>

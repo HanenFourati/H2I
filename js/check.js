@@ -1,3 +1,4 @@
+/*this file is for the shopping carte in the protien and aquipement pages*/
 var proteinItem =document.querySelectorAll('.protein-item');
 var equipementItem =document.querySelectorAll('.equipement-item');
 var image=document.querySelectorAll('.image');
@@ -68,7 +69,7 @@ addCartButton.addEventListener('click',function(){
 	console.log(product.image)
 
 const cartItemsDom =document.querySelectorAll(".cart-item");
-	//Increase Quantité
+	//Increase quantity
 	cartItemsDom.forEach(function(cartItemDom){
 		if(cartItemDom.querySelector('.cart-img').getAttribute('src') === product.image){
 			
@@ -90,7 +91,7 @@ const cartItemsDom =document.querySelectorAll(".cart-item");
 	
 	})
 
-		//Decrese Quantité
+		//Decrese Quantity
 	cartItemsDom.forEach(function(cartItemDom){
 		if(cartItemDom.querySelector('.cart-img').getAttribute('src') === product.image){
 		cartItemDom.querySelector('.minus').addEventListener('click',function(){

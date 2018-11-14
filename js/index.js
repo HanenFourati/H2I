@@ -1,4 +1,4 @@
-function showflipedcart(){
+function showflipedcart(){ //responsible on showing the fliping carte of sign in/sign up form.
     let display=document.getElementById("form-container").style.display;
     if(display=="none")
     document.getElementById("form-container").style.display="block";
@@ -19,8 +19,9 @@ words[0] = "New Arrivals";
 words[1] = "Don't miss it";
 words[2] = "Harry up";
 
-function changeImg(){
-$("#form-container").flip();
+function changeImg(){ // function responsible for changing the images
+    // in the slider and the change the new arrival animation text inside the red box
+$("#form-container").flip(); ///also, respnsible on fliping the carte.
 document.imagesslider.style.width="100%";
 document.imagesslider.style.height="100%";
 	document.imagesslider.src = images[i];
@@ -29,6 +30,7 @@ document.imagesslider.style.height="100%";
 	} else { 
 		i = 0;
     }
+    ///********************* */
     document.getElementById("arrivals1").innerHTML = words[ii];
     document.getElementById("arrivals2").innerHTML = words[ii];
     document.getElementById("arrivals3").innerHTML = words[ii];
@@ -45,19 +47,16 @@ document.imagesslider.style.height="100%";
 	setTimeout("changeImg()", time);
 }
 window.onload=changeImg;
+/********************************************************************************************* */
 
-
-/*********show the fliped cart ******************* */
-
-
-/********************************************************* */
+/*** items Multi carousel *** */
 $(document).ready(function () {
     var itemsMainDiv = ('.MultiCarousel');
     var itemsDiv = ('.MultiCarousel-inner');
     var itemWidth = "";
-
+ /*click on the left and rigth button */
     $('.leftLst, .rightLst').click(function () {
-        var condition = $(this).hasClass("leftLst");
+        var condition = $(this).hasClass("leftLst"); // if we clicked on left retun true else return false 
         if (condition)
             click(0, this);
         else
@@ -76,21 +75,21 @@ $(document).ready(function () {
     //this function define the size of the items
     function ResCarouselSize() {
         var incno = 0;
-        var dataItems = ("data-items");
+        var dataItems = ("data-items"); //
         var itemClass = ('.item');
         var id = 0;
         var btnParentSb = '';
         var itemsSplit = '';
-        var sampwidth = $(itemsMainDiv).width();
-        var bodyWidth = $('body').width();
+        var sampwidth = $(itemsMainDiv).width(); //width of the carousel
+        var bodyWidth = $('body').width(); //width of the body
         $(itemsDiv).each(function () {
             id = id + 1;
-            var itemNumbers = $(this).find(itemClass).length;
+            var itemNumbers = $(this).find(itemClass).length; //items length
             btnParentSb = $(this).parent().attr(dataItems);
             itemsSplit = btnParentSb.split(',');
             $(this).parent().attr("id", "MultiCarousel" + id);
 
-
+        /**resize the carousel according to the page width pc or mbiel or ipad  */
             if (bodyWidth >= 1200) {
                 incno = itemsSplit[3];
                 itemWidth = sampwidth / incno;
@@ -157,32 +156,30 @@ $(document).ready(function () {
     }
 
 });
-
-
-$(window).scroll(function(){
+/********************************************************************************************* */
+/** responsible on the appearance of the top button */
+$(window).scroll(function(){ 
     if ($(this).scrollTop() > 300) { // 300px from top
         $('.top').fadeIn();
     } else {
         $('.top').fadeOut();
     }
 });
-// When the user clicks on the button, scroll to the top of the document
-//Click event to scroll to top
+/** responsible on scrolling to the top button */
 
 function tothetop(){
     $('html, body').animate({scrollTop : 0},800);
     return false;
 }
-
+/**************************************************************************************** */
 /*review carousal **/
 $(document).ready(function () {
     //rotation speed and timer
-    var speed = 5000;
-    
-    var run = setInterval(rotate, speed);
+    var speed = 5000; 
+    var run = setInterval(rotate, speed); //rotate evrey 5 seconds
     var slides = $('.slide');
     var container = $('#slides ul');
-    var elm = container.find(':first-child').prop("tagName");
+    var elm = container.find(':first-child').prop("tagName");//find the first child of the container which is the first review 
     var item_width = container.width();
     var previous = 'prev'; //id of previous button
     var next = 'next'; //id of next button
@@ -191,15 +188,12 @@ $(document).ready(function () {
     container.width(slides.length * item_width); //set the slides container to the correct total width
     container.find(elm + ':first').before(container.find(elm + ':last'));
     resetSlides();
-    
-    
     //if user clicked on prev button
-    
     $('#buttons a').click(function (e) {
       //slide the item
       
-      if (container.is(':animated')) {
-        return false;
+      if (container.is(':animated')) { //Select all elements that are in the progress of an animation at the time the selector is run.
+        return false; //if in the animation we can not click the buttons 
       }
       if (e.target.id == previous) {
         container.stop().animate({
@@ -224,13 +218,7 @@ $(document).ready(function () {
       
     });
     
-    //if mouse hover, pause the auto rotation, otherwise rotate it  
-    container.parent().mouseenter(function () {
-      clearInterval(run);
-    }).mouseleave(function () {
-      run = setInterval(rotate, speed);
-    });
-    
+  
     
     function resetSlides() {
       //and adjust the container so current is in the frame

@@ -1,4 +1,5 @@
-function panieritmes(){
+/*this file is for the chopping carte at the sportwears.html*/
+function panieritmes(){ /*to show and hide shopping card*/
     let display= document.getElementById("shopping-cart").style.display;
     if(display=="none")
     document.getElementById("shopping-cart").style.display="block";
@@ -13,7 +14,7 @@ let w=0;
 const addCartButtons=document.querySelectorAll('[data-action="Add_to_cart"]');
 
 
-function addtocarte(i){
+function addtocarte(i){ /*add products to the shopping card */
     let productDom =document.getElementById("button"+i).parentNode.parentNode;
   let  product={
     image : productDom.querySelector('.imgradious').getAttribute('src'),

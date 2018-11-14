@@ -1,8 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head> 
-    
-    <title> H2I </title>
+    <title> H2I | Fitness</title> <!--title and importation of bootstrap and js -->
     <meta charset="UTF-8">
     <meta name="description" content="H2I|Fitness">
     <link rel="icon" href="images/logotrans.png" type="image/png"/>
@@ -18,20 +17,19 @@
     <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
-
-    <link rel="stylesheet" href="a/animate.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+     <!-- import icon library -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/index.js"></script>
-    <link rel="stylesheet prefetch" href="css/index.css">
+    <script src="js/index.js"></script>  <!-- import js file -->
+    <link rel="stylesheet prefetch" href="css/index.css">  <!-- import css file -->
   </head>
-<body>
+<body>  <!-- Body statred -->
 
 
-        <header>
-        
+        <header>  <!-- Header started -->
+         <!-- nav bar using bootstrap -->
         <nav class="navbar navbar-expand-xl navbar-light fixed-top">
-            <a class="navbar-brand" href="index.html">
+            <a class="navbar-brand" href="index.html"> <!-- animated logo image -->
                 <img id="image-logo1" src="images/heart.png" class="animated zoomIn">
                 <img id="image-logo2" src="images/imageedit_15_7023211203.png"> 
               </a>
@@ -60,12 +58,15 @@
                   
               </ul>
               <div class="search-container">
-                <form action="/action_page.php">
+                <form action="#">
                   <input type="text" placeholder="Search.." name="search" id="searchfld">
                   <button type="submit"><i class="fa fa-search"></i></button>
                 </form> 
               </div> 
-            <div class="divider"></div><div class="divider"></div>
+            <div class="divider"></div>
+            <!--used to space between the search button and the sign button-->
+            <div class="divider"></div> 
+            <!-- Sign Up/Log In that execut a js function to show them in a fliped carte manner  -->
             <button  class="btn btn-info" onclick="showflipedcart();">Sign Up/Log In</button>
                 <div class="divider"></div>
              
@@ -74,8 +75,8 @@
     </header>
     <main>
         
-        <div id="form-container">
-            <div class="front">
+        <div id="form-container"> <!--fliped cart div-->
+            <div class="front"> <!--the front consist of login -->
               <form>
                 <input type="text" name="username" class="inptxt" placeholder="Username">
                 <input type="password" name="password" class="inpps" placeholder="password">
@@ -83,7 +84,7 @@
               </form>
              Click to Create a New Account
             </div>
-            <div class="back">
+            <div class="back">  <!--the back consist of sign up -->
               <form>
                 <input type="text" name="name" class="inptxt" placeholder="Name">
                 <input type="text" name="username" class="inptxt" placeholder="Username">
@@ -94,13 +95,13 @@
             </div>
           </div>
       
-            <img id="islider" name="imagesslider" width="100%"/>
+            <img id="islider" name="imagesslider" width="100%"/>  <!--images slider  -->
             
             <h3 style="text-align: center; padding-top: 2%; color: #14d99e">New Arrivals</h3>
-                <div class="container-fluid">
+                <div class="container-fluid">  <!--carousel of new arrived items manupilated with js -->
                     <div class="row">
                       <div class="MultiCarousel" data-items="1,3,5,6" data-slide="1" id="MultiCarousel"  data-interval="1000">
-                              <div class="MultiCarousel-inner">
+                              <div class="MultiCarousel-inner">  <!--items that contain the grid boxes -->
                                   <div class="item">
                                       <div class="grid-box">
                                           <img src="images/clothes/27909.jpg" class="imgradious">
@@ -156,19 +157,19 @@
                                            </div></div></div>
                           
                                          
-                              </div>
+                              </div> <!--two icons to move left and rigth-->
                               <button class="leftLst"><i class="fa fa-chevron-left"></i></button>
                               <button class="rightLst"><i class="fa fa-chevron-right"></i></button>
                           </div>
                     </div>
             
-            <div class="we">
+            <div class="we"> <!--a div that contain an image and a motivational citation-->
               <div class="we1"><img src="images/home-testimonial.jpg"></div>
               <div class="we2"> <h1> <i class="fa fa-quote-left" style="font-size:48px;color:#1494d9ce"></i>
                 Fitness is not about being better than someone else... It's about being better than you used to be. </h1>
             </div></div>
 
-            <h3 style="text-align: center; padding-top: 2%; color: #1494d9ec">Brands</h3>
+            <h3 style="text-align: center; padding-top: 2%; color: #1494d9ec">Brands</h3><!--partnars brands-->
             <div class="partners">
               <img src="images/puma.png">
               <img src="images/adidas.png">
@@ -177,7 +178,7 @@
               <img src="images/nike.png">
             </div>
             
-               <div class="wrapper">
+               <div class="wrapper"> <!--white boxes that shoxw what we sell-->
                   <div class="box1">
                       <div class="box3">
                           <div class="link" style="margin-left: 10%;">
@@ -214,7 +215,7 @@
                             <a id="next" href="#">&gt;</a> 
                           </div>
                         </div> 
-                        <div id="slides">
+                        <div id="slides"> <!--custemrs view about the products as a slider-->
                             <ul>
                               <li class="slide">
                                 Lightweight leggings, great stretch, great coverage.
@@ -251,11 +252,12 @@
                   </div>
                 </div>
 
-                <div class="coloreddiv">
+                <div class="coloreddiv"> <!--a colored div for the desgin-->
                   </div> 
-    </main>
-    <button class="top" onclick="tothetop();"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>
-        <!-- Footer -->
+    </main>  <!--main ends-->
+    <button class="top" onclick="tothetop();"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>  <!--button to get to the top-->
+        <!-- Footer started  -->
+        <!-- Footer using bootstrap -->
 <footer class="page-footer font-small mdb-color pt-4">
         <div class="container text-center text-md-left">
           <div class="row text-center text-md-left mt-3 pb-3">
@@ -376,5 +378,5 @@
     </footer>
 
    
-</body>
+</body> <!-- body ended  -->
 </html>

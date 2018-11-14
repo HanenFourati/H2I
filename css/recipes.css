@@ -1,23 +1,19 @@
-
-.navbar { 
+.navbar { /*nav bar white color*/
     background-color: #FFFFFF;
 }
-.navbar-brand{
+.navbar-brand{ /*logo display */
+    display: flex;
     justify-content: baseline;
 
 }
-#image-logo1{
+#image-logo1{ /*heart logo image */
     width:60px;
     height:50px;
     background: white;
-    
     -webkit-animation: super-rainbow 15s infinite alternate linear; 
     -moz-animation: super-rainbow 15s infinite alternate linear; 
 }
-/*@-webkit-keyframes zoom {
-0% { opacity: 0; -webkit-transform: scale(0.5); }
-100% { opacity: 1; -webkit-transform: scale(1); }}*/
-@-webkit-keyframes super-rainbow {
+@-webkit-keyframes super-rainbow { /*change color animation and zoom animation for heart image  */
     0% { opacity: 0; -webkit-transform: scale(0.5); }
     10% { opacity: 1; -webkit-transform: scale(1); }
     20%   { background: rgb(57, 136, 182); } 
@@ -38,13 +34,13 @@
     80%  { background: blue; }
     100% { background: violet; }
 }
-#image-logo2 {
+#image-logo2 {/*letters logo image*/
     width:90px;
     height:50px;
     -webkit-animation: super-rainbow2 15s infinite alternate linear; 
     -moz-animation: super-rainbow2 15s infinite alternate linear; 
 }
-@-webkit-keyframes super-rainbow2 {
+@-webkit-keyframes super-rainbow2 { /*change color animation and zoom animation for letters logo image  */
     20%   { background: rgb(57, 136, 182); } 
     30%  { background: orange; }
     40%  { background: yellow; }
@@ -62,12 +58,12 @@
     80%  { background: blue; }
     100% { background: violet; }
 }
-.divider{
+.divider{ /* empty div */
     width:1px;
     height:auto;
     display:inline-block;
 }
-.search-container button {
+.search-container button { /*search button custimazation*/
     
     float: right;
     padding: 6px 10px;
@@ -76,7 +72,7 @@
     border: none;
     cursor: pointer;
   }
-#searchfld{
+#searchfld{  /*search field custimazation*/
     padding: 6px;
    
     font-size: 17px;
@@ -90,15 +86,10 @@
       padding-top: 5%;
       background-color: #26a7e241;
   }
-  .shop-carte{
-    display: flex;
-    justify-content: flex-end;
-    padding-bottom: 10px;
-}
 #photos{
     padding-top: 2%;
 }
-  .load-btn{
+ .load-btn{
     text-align: center;
     padding-bottom: 2%;
 }
@@ -116,7 +107,7 @@
     color: black;
     text-decoration: none;
 }
-  .info{
+  .info{ /*recipes description custmization*/
     display: flex;
     align-content: space-between;
     justify-content: space-between;
@@ -131,7 +122,7 @@
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
-.grid-box{
+.grid-box{ /*grid box */
     border-top-left-radius: 15px; 
     border-top-right-radius: 15px;
     border-bottom-right-radius: 15px;
@@ -139,10 +130,10 @@
     background-color: #FFFFFF;
    
 }
-.fa-heart{
+.fa-heart{ /*like icon custmization*/
     color: rgb(212, 209, 209);
     }
-    /****used to filter the items into sweets, drinks and saltes**/
+/****used to filter the items into sweets, drinks and saltes**/
 .itemscategories{
     padding-top: 40px;
    display: flex;
@@ -171,19 +162,7 @@ strong{
     background-color: rgb(65, 65, 65);
     color: white;
 }
-/***MEDIA QUERY***/
-@media screen and (max-width: 1024px) {
-.grid-container-one{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-   
-}
-.grid-box{
-    margin-bottom: 10px;  
-}
-}
-/**load animation***/
+/**loading animation***/
 #preloader{
     position: fixed;
     top: 0;
@@ -213,4 +192,16 @@ padding-left: 45%;
     height: 39px;
     display: none;
     text-align: center;
+}
+/***MEDIA QUERY***/
+@media screen and (max-width: 1024px) {
+.grid-container-one{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+.grid-box{
+    margin-bottom: 10px;  
+}
 }

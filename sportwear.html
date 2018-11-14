@@ -2,7 +2,7 @@
 <html>
 <head> 
     
-    <title> H2I </title>
+    <title> H2I | Sport Wears </title><!--title and importation of bootstrap and js -->
     <meta charset="UTF-8">
     <meta name="description" content="H2I|Fitness">
     <link rel="icon" href="images/logotrans.png" type="image/png"/>
@@ -19,16 +19,18 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/sportwear.js"></script>
-    <script src="js/checktwo.js"></script>
-    <link rel="stylesheet prefetch" href="css/sportwear.css">
+    <script src="js/sportwear.js"></script>  <!-- import js file -->
+    <script src="js/checktwo.js"></script> <!-- import js file -->
+    <link rel="stylesheet prefetch" href="css/sportwear.css"> <!-- import css file -->
   </head>
-<body >
-    <div id="preloader">
+<body>  <!-- Body statred -->
+    <div id="preloader">  <!-- animation while loading the page -->
         <img id="preloadimgposition" src="images/Preloader_3.gif" alt="">
     </div>
 
-    <header>   
+    <header>  
+       <!-- Header started -->
+         <!-- nav bar using bootstrap --> 
         <nav class="navbar navbar-expand-lg navbar-light">
           <a class="navbar-brand" href="index.html">
             <img id="image-logo1" src="images/heart.png" class="animated zoomIn">
@@ -66,7 +68,7 @@
             </div>
           </nav>
     </header>
-    <img id="islider" name="imagesslider" width="100%"/>
+    <img id="islider" name="imagesslider" width="100%"/> <!--discount images cover -->
     <main id="refresh">   <!--main started -->  
       <div class="shop-carte">
      <button onclick="panieritmes();" class="check" id="myBtn"><i class="fa fa-shopping-cart" ></i>Check Cart</button>
@@ -83,14 +85,14 @@
           <div><h6 id="item-price" class="price"></h6>
           </div></div><hr> -->
         </div>
-      <div class="itemscategories">
+      <div class="itemscategories"><!--filter the products into pants,shoes, etc.-->
             <button class="itemscategoriesbtn" id="all" onclick="choose('all');">All</button>
             <button class="itemscategoriesbtn" id="sweaters" onclick="choose('sweater');">Sweaters</button>
             <button class="itemscategoriesbtn" id="shoes" onclick="choose('shoes');">Running Shoes</button>
             <button class="itemscategoriesbtn" id="pants" onclick="choose('pants');">Pants</button> 
           </div>
           
-        <section id="photos">
+        <section id="photos">  <!-- the products grid -->
             <div class="grid-container-one">
               <a href="#" id="pop5" onclick="ccc(5)">    <div class="grid-box" value="sweater"> 
                       <img  id="imageresource5"  src="images/clothes/28357.jpg" class="imgradious"> 
@@ -184,7 +186,7 @@
                
         </section>
         
-        <section class="boxmore1">
+        <section class="boxmore1"><!-- more products -->
           <div class="grid-container-one">
             <a href="#" id="pop9" onclick="ccc(9)">    <div class="grid-box" value="sweater"> 
                 <img  id="imageresource9"  src="images/clothes/27909.jpg" class="imgradious"> <p id="discount2"></p>
@@ -270,7 +272,7 @@
                   </div>     
                     
               </section>
-              <section class="boxmore2">
+              <section class="boxmore2"> <!-- more products -->
                   <div class="grid-container-one">
                       <a href="#" id="pop13" onclick="ccc(13)">    <div class="grid-box" value="sweater"> 
                           <img  id="imageresource13"  src="images/clothes/24934-1.jpg" class="imgradious"> 
@@ -355,13 +357,13 @@
                     
                     </section>
         
-        
+         <!--load more/less button div -->
           <div class="load-btn"><button type="button" id="loadMore"   class="btn btn-info"
             onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load More Items</button></div>
     
     </main> 
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog"> <!--model to show products details-->
         <div class="modal-content">
           <div class="modal-header">
           <h4 class="modal-title" id="titleofitem"></h4>
@@ -380,7 +382,7 @@
 
 
 
-        <!-- Footer -->
+        <!-- Footer started using bootstrap -->
 <footer class="page-footer font-small mdb-color pt-4">
         <div class="container text-center text-md-left">
           <div class="row text-center text-md-left mt-3 pb-3">
@@ -498,6 +500,6 @@
     
       
       <!-- Footer -->
-    </footer>
-</body>
+    </footer> <!-- Footer ended -->
+  </body>  <!-- Body Ended  -->
 </html>

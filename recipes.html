@@ -2,7 +2,7 @@
 <html>
 <head> 
     
-    <title> H2I </title>
+    <title> H2I | Recipes </title>
     <meta charset="UTF-8">
     <meta name="description" content="H2I|Recipes">
     <link rel="icon" href="images/logotrans.png" type="image/png"/>
@@ -22,14 +22,14 @@
     <script src="js/recipes.js"></script>
     <link rel="stylesheet prefetch" href="css/recipes.css">
   </head>
-<body  onload="show();">
-    <div id="preloader">
+<body  onload="show();"> <!-- Body statred -->
+    <div id="preloader"> <!-- animation while loading the page -->
         <img id="preloadimgposition" src="images/Preloader_3.gif" alt="">
     </div>
     
     <header>
         
-        <nav class="navbar navbar-expand-lg navbar-light">
+        <nav class="navbar navbar-expand-lg navbar-light"> <!-- nav bar using bootstrap -->
           <a class="navbar-brand" href="index.html">
             <img id="image-logo1" src="images/heart.png" class="animated zoomIn">
             <img id="image-logo2" src="images/imageedit_15_7023211203.png"> 
@@ -66,13 +66,13 @@
           </nav>
     </header>
     <main id="refresh">   <!--main started -->  
-              <div class="itemscategories">
+          <div class="itemscategories"> <!--filter the recipes into sweets, salts, etc.-->
             <button class="itemscategoriesbtn" id="all" onclick="choose('all');">All</button>
             <button class="itemscategoriesbtn" id="sweets" onclick="choose('sweets');">Sweets</button>
             <button class="itemscategoriesbtn" id="salts" onclick="choose('salts');">Salts</button>
             <button class="itemscategoriesbtn" id="drinks" onclick="choose('drinks');">Drinks</button>
           </div>
-        <section id="photos">
+        <section id="photos"> <!-- the recipes grid -->
             <div class="grid-container-one">
               <a href="#" id="pop5" onclick="ccc(5)">    <div class="grid-box" value="sweets"> 
                       <img  id="imageresource5"  src="images/dishes/r1.jpg" class="imgradious"> 
@@ -250,7 +250,7 @@
                
         </section>
         
-        <section class="boxmore1">
+        <section class="boxmore1">  <!-- more recipes -->
           <div class="grid-container-one">
             <a href="#" id="pop9" onclick="ccc(9)">    <div class="grid-box" value="sweets"> 
                 <img  id="imageresource9"  src="images/dishes/r4.jpg" class="imgradious"> 
@@ -421,7 +421,7 @@
                   </div>     
                     
               </section>
-              <section class="boxmore2">
+              <section class="boxmore2">  <!--more recipes-->
                   <div class="grid-container-one">
                       <a href="#" id="pop12" onclick="ccc(12)">    <div class="grid-box" value="drinks"> 
                           <img  id="imageresource12"  src="images/dishes/r7.jpg" class="imgradious"> 
@@ -494,12 +494,14 @@
                              
                         </div>  
                     </section>
-          <div class="load-btn"><button type="button" id="loadMore"   class="btn btn-info"
-            onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load More Items</button></div>  
+          <div class="load-btn"> <!--load more/less button div -->
+            <button type="button" id="loadMore"   class="btn btn-info"
+            onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load More Items</button>
+          </div>  
     
     
     <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-      <div class="modal-dialog">
+      <div class="modal-dialog"> <!--model to show recipes details-->
         <div class="modal-content">
           <div class="modal-header">
           <h4 class="modal-title" id="titleofitem">Palbo Website</h4>
@@ -515,8 +517,8 @@
       </div>
       </div>
       <button class="top"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>
-        <!-- Footer -->
-        
+       
+   <!-- Footer started using bootstrap -->      
 <footer class="page-footer font-small mdb-color pt-4">
         <div class="container text-center text-md-left">
           <div class="row text-center text-md-left mt-3 pb-3">
@@ -634,6 +636,6 @@
     
       
       <!-- Footer -->
-    </footer>
-</body>
+    </footer>  <!-- Footer ended -->
+</body>  <!-- Body Ended  -->
 </html>

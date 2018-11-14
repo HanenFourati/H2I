@@ -13,9 +13,9 @@ var iii = 0;
 var words2= [];
 words2[0] = "Discount";
 words2[1] = "-40%";
-
-
-function changeImg(){
+function changeImg(){ // function responsible for changing the images
+  // in the slider and the discount animated text inside few of products boxes
+  //and animation while loading the page
   setTimeout('document.getElementById("preloader").style.display="none";', 1000);
   document.imagesslider.style.width="100%";
   document.imagesslider.style.height="300px";
@@ -47,11 +47,10 @@ function changeImg(){
 	setTimeout("changeImg()", time);
 }
 window.onload=changeImg;
-/************************** */
+/**************************************************************************/
 let i=1;
-function vis(){
+function vis(){ //responsible on load more products
 let r=document.getElementById('loadMore').innerHTML;
- //if (r==="<i class=\"fa fa-spinner fa-spin\"></i>"+"Load More Items"){ 
    $('.boxmore'+i).slideDown("slow");
    i++;
    if(i>2)
@@ -64,15 +63,15 @@ let r=document.getElementById('loadMore').innerHTML;
 }
 /********************** */
 function changeColor(i)
-{
+{  //responsible on like button
    var icon = document.getElementById('heart'+i);
    if(icon.style.color != "red")
    icon.style.color = "red";
    else 
    icon.style.color="rgb(212, 209, 209)";        
 }
-/******************** */
-function ccc(i){
+/****************************************/
+function ccc(i){ //responsible on products ppopups 
 $("#pop"+i.toString()).on("click", function() {
   let title= document.getElementById("title"+i.toString()).innerHTML;
   let titlemodel= document.getElementById("titleofitem");
@@ -82,8 +81,8 @@ $("#pop"+i.toString()).on("click", function() {
   titlemodel.innerHTML= title;
   discriptionmodel.innerHTML= discription;
   $('#imagemodal').modal('show');});}
-
-function choose(k){
+/******************************************/
+function choose(k){ //responsible for products filter
 
   if(k=='all')
   {
@@ -116,6 +115,10 @@ function choose(k){
 }
 
 }
+/******************************* */
+/******************************* */
+//at 300px position the button appear
+// When the user clicks on the button, scroll to the top of the document
 $(window).scroll(function(){
   if ($(this).scrollTop() > 300) { // 300px from top
     $('.top').fadeIn();
@@ -123,8 +126,6 @@ $(window).scroll(function(){
     $('.top').fadeOut();
   }
 });
-// When the user clicks on the button, scroll to the top of the document
-//Click event to scroll to top
 $('.top').click(function(){
   $('html, body').animate({scrollTop : 0},800);
   return false;
