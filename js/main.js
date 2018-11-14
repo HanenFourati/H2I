@@ -16,6 +16,7 @@ var $btns1 = $('.btnn1').click(function() {
     var $el = $('.' + this.id).fadeIn(1000);
     $('.equipement-content > div').not($el).hide(1000);
   }})
+  /*****animat the top button */
 $(window).scroll(function(){
 		if ($(this).scrollTop() > 300) { // 300px from top
 			$('.top').fadeIn();
@@ -49,3 +50,4 @@ let r=document.getElementById('loadless').innerHTML;
     $('.boxmore').slideUp("slow");
     
 }
+/***********/

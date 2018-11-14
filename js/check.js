@@ -13,13 +13,6 @@ var cartItems=document.querySelectorAll('.cart-item');
 var total=document.querySelectorAll('.total');
 var cartPrice=document.querySelectorAll('.cart-price');
 
-// Close Checking Cart Div
-
-close.addEventListener('click',function(){
-	setTimeout(cartDom.style.display='none',4000)
-})
-
-
 
 
 // Add Item to Cart
@@ -35,7 +28,7 @@ addCartButton.addEventListener('click',function(){
 		name  : productDom.querySelector('.name').innerText,
 		quantity: 1,
 	};
-
+	
 	const isInCart=cart.filter(cartItem => (cartItem.name === product.name)).length > 0
 
 	if(isInCart === false){ // checking if Item added more than one
@@ -142,10 +135,12 @@ var span = document.getElementsByClassName("close")[0];
 
 // When the user clicks the button, open the modal 
 btn.addEventListener('click',function() {
-    modal.style.display = "block";
-})
-
-
+	let d= document.getElementById('myModal').style.display;
+    if(d=="none")
+	modal.style.display = "block";
+	else
+	modal.style.display = "none";
+});
 // When the user clicks anywhere outside of the modal, close it
 window.onclick = function(event) {
     if (event.target == modal) {

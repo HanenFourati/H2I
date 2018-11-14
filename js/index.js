@@ -5,7 +5,7 @@ function showflipedcart(){ //responsible on showing the fliping carte of sign in
     else
     document.getElementById("form-container").style.display="none";
 }
-
+/*********************************************************** */
 var i = 0; 			
 var images = [];
 var time = 3000;
@@ -21,7 +21,24 @@ words[2] = "Harry up";
 
 function changeImg(){ // function responsible for changing the images
     // in the slider and the change the new arrival animation text inside the red box
-$("#form-container").flip(); ///also, respnsible on fliping the carte.
+    $().ready(function() { // flip the carte of sign in and sign up
+        $("#form-container").flip({
+          trigger: 'manual'
+        });
+    });
+    $(".signin").click(function() {
+    
+        $(".front").css('opacity', '0');
+        $(".back").css('opacity', '100');
+        $("#form-container").flip(true);
+        return false;
+    });
+    $("#unflip").click(function(){
+        $(".front").css('opacity', '100');
+        $(".back").css('opacity', '0');
+        $("#form-container").flip(false);
+        return false;  
+    });
 document.imagesslider.style.width="100%";
 document.imagesslider.style.height="100%";
 	document.imagesslider.src = images[i];

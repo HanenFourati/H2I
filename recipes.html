@@ -69,9 +69,10 @@
           <div class="itemscategories"> <!--filter the recipes into sweets, salts, etc.-->
             <button class="itemscategoriesbtn" id="all" onclick="choose('all');">All</button>
             <button class="itemscategoriesbtn" id="sweets" onclick="choose('sweets');">Sweets</button>
-            <button class="itemscategoriesbtn" id="salts" onclick="choose('salts');">Salts</button>
+            <button class="itemscategoriesbtn" id="salts" onclick="choose('salts');" >Salts</button>
             <button class="itemscategoriesbtn" id="drinks" onclick="choose('drinks');">Drinks</button>
           </div>
+          <div id="recipesitems">
         <section id="photos"> <!-- the recipes grid -->
             <div class="grid-container-one">
               <a href="#" id="pop5" onclick="ccc(5)">    <div class="grid-box" value="sweets"> 
@@ -494,6 +495,7 @@
                              
                         </div>  
                     </section>
+                  </div>
           <div class="load-btn"> <!--load more/less button div -->
             <button type="button" id="loadMore"   class="btn btn-info"
             onclick="vis();" ><i class="fa fa-spinner fa-spin"></i>Load More Items</button>
@@ -504,7 +506,7 @@
       <div class="modal-dialog"> <!--model to show recipes details-->
         <div class="modal-content">
           <div class="modal-header">
-          <h4 class="modal-title" id="titleofitem">Palbo Website</h4>
+          <h4 class="modal-title" id="titleofitem"></h4>
           </div>
           <div class="modal-body">
             <img src="" id="imagepreview" >
@@ -516,8 +518,8 @@
         </div>
       </div>
       </div>
-      <button class="top"><i class='fa fa-angle-up' style='font-size:48px;'></i></button>
-       
+      <button class="top"  onclick="tothetop();"><i class='fa fa-angle-up' style='font-size:48px;'></i></button> 
+   </main>    
    <!-- Footer started using bootstrap -->      
 <footer class="page-footer font-small mdb-color pt-4">
         <div class="container text-center text-md-left">

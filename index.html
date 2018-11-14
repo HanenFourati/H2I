@@ -75,23 +75,25 @@
     </header>
     <main>
         
+
+      
         <div id="form-container"> <!--fliped cart div-->
-            <div class="front"> <!--the front consist of login -->
+            <div class="front" id="front"> <!--the front consist of login -->
               <form>
                 <input type="text" name="username" class="inptxt" placeholder="Username">
                 <input type="password" name="password" class="inpps" placeholder="password">
                 <input type="submit" value="Log In" class="inpsub">
               </form>
-             Click to Create a New Account
+              <a href="#" class="signin" id="flip" onclick="fliptosignup();" style="color: white;">Click to Create a New Account</a> 
             </div>
-            <div class="back">  <!--the back consist of sign up -->
+            <div class="back" id="back">  <!--the back consist of sign up -->
               <form>
                 <input type="text" name="name" class="inptxt" placeholder="Name">
                 <input type="text" name="username" class="inptxt" placeholder="Username">
                 <input type="password" name="password" class="inpps" placeholder="Password">
                 <input type="submit" value="Sign Up" class="inpsub">
               </form>
-              Click to Login to an Existing Account
+              <a href="#" fliptologin() id="unflip" style="color: white;">Click to Login to an Existing Account</a>  
             </div>
           </div>
       
@@ -276,10 +278,10 @@
                 <a href="sportwear.html">Sport Wears</a>
               </p>
               <p>
-                <a href="#">Training Machines</a>
+                <a href="equipement.html">Training Machines</a>
               </p>
               <p>
-                <a href="#">Proteins</a>
+                <a href="protein.html">Proteins</a>
               </p>
               <p>
                 <a href="recipes.html">Recipes</a>

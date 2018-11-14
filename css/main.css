@@ -240,7 +240,7 @@ background-color: #26a7e241;}
 .cart-item{
        display: flex;
     padding-top: 2px;
-    border: 1px dashed;
+    border-bottom: 1px solid rgb(70, 161, 221);
     margin-bottom: 16px;
 }
 
@@ -301,25 +301,18 @@ background-color: #53B5A7
 
 #myModal {
     display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-   padding-top: 70px; /* Location of the box */
-    left: 10px;
-    top: 10px;
-    min-width: 100%; /* Full width */
-    min-height: 100%; /* Full height */
+    border-radius: 8px;
+    padding: 2%;
     overflow: auto; 
-    /*background-color: rgb(0,0,0); 
-    background-color: rgba(0,0,0,0.4); */
+    
 }
 /* Modal Content */
 .modal-content-check {
-    background-color: #fefefe;
+    background-color: rgba(255, 255, 255, 0.767);
     margin: auto;
     padding: 20px;
-    border: 1px solid #888;
-    min-width: 80%;
-    min-height: 80%
+    border: 1px solid rgb(70, 161, 221);
+   
     
 }
 /***MEDIA QUERY***/
@@ -354,4 +347,3 @@ background-color: #53B5A7
     
     }
     }
-

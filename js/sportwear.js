@@ -119,14 +119,16 @@ function choose(k){ //responsible for products filter
 /******************************* */
 //at 300px position the button appear
 // When the user clicks on the button, scroll to the top of the document
-$(window).scroll(function(){
+$(window).scroll(function(){ 
   if ($(this).scrollTop() > 300) { // 300px from top
-    $('.top').fadeIn();
+      $('.top').fadeIn();
   } else {
-    $('.top').fadeOut();
+      $('.top').fadeOut();
   }
 });
-$('.top').click(function(){
+/** responsible on scrolling to the top button */
+
+function tothetop(){
   $('html, body').animate({scrollTop : 0},800);
   return false;
-});
+}
